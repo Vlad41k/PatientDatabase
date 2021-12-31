@@ -130,7 +130,7 @@ namespace MainWindow.View
             // 
             this.tbDecree.Location = new System.Drawing.Point(698, 156);
             this.tbDecree.Name = "tbDecree";
-            this.tbDecree.Size = new System.Drawing.Size(342, 29);
+            this.tbDecree.Size = new System.Drawing.Size(330, 29);
             this.tbDecree.TabIndex = 3;
             // 
             // tbMedicalInstitutionAdress
@@ -152,7 +152,7 @@ namespace MainWindow.View
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(698, 55);
+            this.label6.Location = new System.Drawing.Point(692, 55);
             this.label6.MaximumSize = new System.Drawing.Size(400, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(342, 84);
@@ -164,7 +164,7 @@ namespace MainWindow.View
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(738, 15);
+            this.label5.Location = new System.Drawing.Point(725, 19);
             this.label5.MaximumSize = new System.Drawing.Size(400, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(255, 21);
@@ -229,7 +229,7 @@ namespace MainWindow.View
             // tbCardCreatingDate
             // 
             this.tbCardCreatingDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbCardCreatingDate.Location = new System.Drawing.Point(872, 50);
+            this.tbCardCreatingDate.Location = new System.Drawing.Point(916, 48);
             this.tbCardCreatingDate.Name = "tbCardCreatingDate";
             this.tbCardCreatingDate.Size = new System.Drawing.Size(112, 26);
             this.tbCardCreatingDate.TabIndex = 7;
@@ -245,7 +245,7 @@ namespace MainWindow.View
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(672, 53);
+            this.label9.Location = new System.Drawing.Point(716, 51);
             this.label9.MaximumSize = new System.Drawing.Size(400, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(194, 21);
@@ -320,13 +320,13 @@ namespace MainWindow.View
             this.tbAddition.Location = new System.Drawing.Point(6, 420);
             this.tbAddition.Multiline = true;
             this.tbAddition.Name = "tbAddition";
-            this.tbAddition.Size = new System.Drawing.Size(1034, 116);
+            this.tbAddition.Size = new System.Drawing.Size(1028, 116);
             this.tbAddition.TabIndex = 34;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(12, 396);
+            this.label24.Location = new System.Drawing.Point(6, 396);
             this.label24.MaximumSize = new System.Drawing.Size(400, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(215, 21);
@@ -443,7 +443,7 @@ namespace MainWindow.View
             this.tbWorkNumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbWorkNumber.Location = new System.Drawing.Point(923, 52);
             this.tbWorkNumber.Name = "tbWorkNumber";
-            this.tbWorkNumber.Size = new System.Drawing.Size(111, 26);
+            this.tbWorkNumber.Size = new System.Drawing.Size(105, 26);
             this.tbWorkNumber.TabIndex = 12;
             // 
             // tbHomeNumber
@@ -647,6 +647,7 @@ namespace MainWindow.View
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "Form_025_o";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_025_o";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

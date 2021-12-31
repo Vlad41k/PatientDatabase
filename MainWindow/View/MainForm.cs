@@ -42,5 +42,6 @@ namespace MainWindow.View
             JSONManagement.JSONDeserialize(Storage.Patients);
             _bs.ResetBindings(true);
         }
+
     }
 }

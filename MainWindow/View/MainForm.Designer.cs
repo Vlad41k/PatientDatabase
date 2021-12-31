@@ -29,19 +29,30 @@ namespace MainWindow.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbPatientList = new System.Windows.Forms.ListBox();
             this.btPatientAdd = new System.Windows.Forms.Button();
             this.btPatientRemove = new System.Windows.Forms.Button();
+            this.dgwDiary = new System.Windows.Forms.DataGridView();
+            this.ApplicationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PlaceOfTreatment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MainInformation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Appointment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwDiary)).BeginInit();
             this.SuspendLayout();
             // 
             // lbPatientList
             // 
             this.lbPatientList.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.lbPatientList.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbPatientList.FormattingEnabled = true;
-            this.lbPatientList.ItemHeight = 15;
+            this.lbPatientList.ItemHeight = 21;
             this.lbPatientList.Location = new System.Drawing.Point(12, 12);
             this.lbPatientList.Name = "lbPatientList";
-            this.lbPatientList.Size = new System.Drawing.Size(268, 379);
+            this.lbPatientList.Size = new System.Drawing.Size(339, 592);
             this.lbPatientList.TabIndex = 0;
             // 
             // btPatientAdd
@@ -49,9 +60,9 @@ namespace MainWindow.View
             this.btPatientAdd.BackColor = System.Drawing.SystemColors.Highlight;
             this.btPatientAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btPatientAdd.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btPatientAdd.Location = new System.Drawing.Point(12, 406);
+            this.btPatientAdd.Location = new System.Drawing.Point(12, 610);
             this.btPatientAdd.Name = "btPatientAdd";
-            this.btPatientAdd.Size = new System.Drawing.Size(108, 41);
+            this.btPatientAdd.Size = new System.Drawing.Size(137, 57);
             this.btPatientAdd.TabIndex = 1;
             this.btPatientAdd.Text = "Добавить";
             this.btPatientAdd.UseVisualStyleBackColor = false;
@@ -61,24 +72,77 @@ namespace MainWindow.View
             this.btPatientRemove.BackColor = System.Drawing.SystemColors.Highlight;
             this.btPatientRemove.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btPatientRemove.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btPatientRemove.Location = new System.Drawing.Point(172, 406);
+            this.btPatientRemove.Location = new System.Drawing.Point(201, 610);
             this.btPatientRemove.Name = "btPatientRemove";
-            this.btPatientRemove.Size = new System.Drawing.Size(108, 41);
+            this.btPatientRemove.Size = new System.Drawing.Size(150, 57);
             this.btPatientRemove.TabIndex = 2;
             this.btPatientRemove.Text = "Удалить";
             this.btPatientRemove.UseVisualStyleBackColor = false;
+            // 
+            // dgwDiary
+            // 
+            this.dgwDiary.AllowUserToAddRows = false;
+            this.dgwDiary.AllowUserToDeleteRows = false;
+            this.dgwDiary.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dgwDiary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwDiary.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ApplicationDate,
+            this.PlaceOfTreatment,
+            this.MainInformation,
+            this.Appointment});
+            this.dgwDiary.Location = new System.Drawing.Point(371, 12);
+            this.dgwDiary.Name = "dgwDiary";
+            this.dgwDiary.RowTemplate.Height = 25;
+            this.dgwDiary.Size = new System.Drawing.Size(884, 592);
+            this.dgwDiary.TabIndex = 3;
+            // 
+            // ApplicationDate
+            // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ApplicationDate.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ApplicationDate.HeaderText = "Дата звернення";
+            this.ApplicationDate.Name = "ApplicationDate";
+            this.ApplicationDate.Width = 75;
+            // 
+            // PlaceOfTreatment
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PlaceOfTreatment.DefaultCellStyle = dataGridViewCellStyle2;
+            this.PlaceOfTreatment.HeaderText = "Місце проведення лікування:  поліклініка – 1, вдома – 2, денний стаціонар – 3, ст" +
+    "аціонар вдома – 4";
+            this.PlaceOfTreatment.Name = "PlaceOfTreatment";
+            this.PlaceOfTreatment.Width = 115;
+            // 
+            // MainInformation
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MainInformation.DefaultCellStyle = dataGridViewCellStyle3;
+            this.MainInformation.HeaderText = "Скарги хворого, об’єктивні дані, діагноз, перебіг хвороби";
+            this.MainInformation.Name = "MainInformation";
+            this.MainInformation.Width = 500;
+            // 
+            // Appointment
+            // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Appointment.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Appointment.HeaderText = "Призначення, підпис лікаря або консультанта";
+            this.Appointment.Name = "Appointment";
+            this.Appointment.Width = 150;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1267, 679);
+            this.Controls.Add(this.dgwDiary);
             this.Controls.Add(this.btPatientRemove);
             this.Controls.Add(this.btPatientAdd);
             this.Controls.Add(this.lbPatientList);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgwDiary)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -88,5 +152,10 @@ namespace MainWindow.View
         private System.Windows.Forms.ListBox lbPatientList;
         private System.Windows.Forms.Button btPatientAdd;
         private System.Windows.Forms.Button btPatientRemove;
+        private System.Windows.Forms.DataGridView dgwDiary;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ApplicationDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PlaceOfTreatment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MainInformation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Appointment;
     }
 }
