@@ -6,16 +6,24 @@ namespace MainWindow.View
 {
     public partial class MainForm : Form
     {
-        private readonly BindingSource _bs;
+        private readonly BindingSource _bs, _Diarybs;
         public MainForm()
         {
             InitializeComponent();
             _bs = new BindingSource();
-            _bs.DataSource = Storage.Patients;
             lbPatientList.DataSource = _bs;
+            _bs.DataSource = Storage.Patients;
+            _Diarybs = new BindingSource();
+            dgwDiary.DataSource = _Diarybs;
             btPatientAdd.Click += onPatientAdd;
             btPatientRemove.Click += onPatientRemove;
             lbPatientList.DoubleClick += OnEditPatientInformation;
+            lbPatientList.SelectedIndexChanged += OnIndexChanged;
+        }
+
+        private void OnIndexChanged(object sender, EventArgs e)
+        {
+            _Diarybs.DataSource = Storage.Patients[lbPatientList.SelectedIndex].PatientDiary;
         }
 
         private void OnEditPatientInformation(object sender, EventArgs e)
