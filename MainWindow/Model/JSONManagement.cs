@@ -16,6 +16,7 @@ namespace MainWindow.Model
                     new JsonSerializerOptions()
                     {
                         WriteIndented = true,
+                        IncludeFields = true,
                     });
                 File.WriteAllText("patients.json", json);
             }

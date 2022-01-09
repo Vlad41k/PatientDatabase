@@ -72,6 +72,8 @@ namespace MainWindow.Model
         {
             if (string.IsNullOrWhiteSpace(cardcreatingdate))
                 return this;
+            if (cardcreatingdate == "дд.мм.гггг")
+                return this;
             CardCreatingDate = Convert.ToDateTime(cardcreatingdate);
             return this;
         }
@@ -90,6 +92,8 @@ namespace MainWindow.Model
         public Form_025 SetBirthday(string birthday)
         {
             if (string.IsNullOrWhiteSpace(birthday))
+                return this;
+            if (birthday == "дд.мм.гггг")
                 return this;
             Birthday = Convert.ToDateTime(birthday);
             return this;
@@ -139,6 +143,8 @@ namespace MainWindow.Model
         {
             if (string.IsNullOrWhiteSpace(registered1))
                 return this;
+            if (registered1 == "дд.мм.гггг")
+                return this;
             Registered1 = Convert.ToDateTime(registered1);
             return this;
         }
@@ -150,6 +156,8 @@ namespace MainWindow.Model
         public Form_025 SetDeregistered1(string deregistered1)
         {
             if (string.IsNullOrWhiteSpace(deregistered1))
+                return this;
+            if (deregistered1 == "дд.мм.гггг")
                 return this;
             Deregistered1 = Convert.ToDateTime(deregistered1);
             return this;
@@ -163,6 +171,8 @@ namespace MainWindow.Model
         {
             if (string.IsNullOrWhiteSpace(registered2))
                 return this;
+            if (registered2 == "дд.мм.гггг")
+                return this;
             Registered2 = Convert.ToDateTime(registered2);
             return this;
         }
@@ -174,6 +184,8 @@ namespace MainWindow.Model
         public Form_025 SetDeregistered2(string deregistered2)
         {
             if (string.IsNullOrWhiteSpace(deregistered2))
+                return this;
+            if (deregistered2 == "дд.мм.гггг")
                 return this;
             Deregistered2 = Convert.ToDateTime(deregistered2);
             return this;
