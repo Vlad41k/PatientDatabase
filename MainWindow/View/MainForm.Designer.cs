@@ -33,6 +33,7 @@ namespace MainWindow.View
             this.btPatientAdd = new System.Windows.Forms.Button();
             this.btPatientRemove = new System.Windows.Forms.Button();
             this.dgwDiary = new System.Windows.Forms.DataGridView();
+            this.btSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwDiary)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,14 +78,27 @@ namespace MainWindow.View
             this.dgwDiary.Location = new System.Drawing.Point(370, 25);
             this.dgwDiary.Name = "dgwDiary";
             this.dgwDiary.RowTemplate.Height = 25;
-            this.dgwDiary.Size = new System.Drawing.Size(884, 344);
+            this.dgwDiary.Size = new System.Drawing.Size(884, 579);
             this.dgwDiary.TabIndex = 4;
+            // 
+            // btSave
+            // 
+            this.btSave.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btSave.Location = new System.Drawing.Point(1104, 619);
+            this.btSave.Name = "btSave";
+            this.btSave.Size = new System.Drawing.Size(150, 57);
+            this.btSave.TabIndex = 5;
+            this.btSave.Text = "Сохранить";
+            this.btSave.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1267, 679);
+            this.Controls.Add(this.btSave);
             this.Controls.Add(this.dgwDiary);
             this.Controls.Add(this.btPatientRemove);
             this.Controls.Add(this.btPatientAdd);
@@ -104,5 +118,6 @@ namespace MainWindow.View
         private System.Windows.Forms.Button btPatientAdd;
         private System.Windows.Forms.Button btPatientRemove;
         private System.Windows.Forms.DataGridView dgwDiary;
+        private System.Windows.Forms.Button btSave;
     }
 }

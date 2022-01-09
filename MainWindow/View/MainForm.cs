@@ -17,9 +17,21 @@ namespace MainWindow.View
             dgwDiary.DataSource = _Diarybs;
             btPatientAdd.Click += OnPatientAdd;
             btPatientRemove.Click += OnPatientRemove;
+            btSave.Click += OnSave;
             lbPatientList.DoubleClick += OnEditPatientInformation;
             lbPatientList.SelectedIndexChanged += OnIndexChanged;
             this.FormClosing += OnApplicationClossing;
+        }
+
+        private void OnSave(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Word Documents (*.docx)|*.docx";
+            sfd.FileName = "PatientDiary.docx";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                SaveToWord.SaveDataToWord(dgwDiary, sfd.FileName);
+            }
         }
 
         private void OnApplicationClossing(object sender, FormClosingEventArgs e)
