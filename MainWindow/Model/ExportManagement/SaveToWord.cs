@@ -69,7 +69,8 @@ namespace MainWindow.Model
                 //header row style
                 oDoc.Application.Selection.Tables[1].Rows[1].Range.Bold = 1;
                 oDoc.Application.Selection.Tables[1].Rows[1].Range.Font.Name = "Tahoma";
-                oDoc.Application.Selection.Tables[1].Rows[1].Range.Font.Size = 14;
+                oDoc.Application.Selection.Tables[1].Rows[1].Range.Font.Size = 12;
+
 
                 //add header row manually
                 for (int c = 0; c <= ColumnCount - 1; c++)
@@ -80,6 +81,10 @@ namespace MainWindow.Model
                 //table style 
                 oDoc.Application.Selection.Tables[1].Rows[1].Select();
                 oDoc.Application.Selection.Cells.VerticalAlignment = Word.WdCellVerticalAlignment.wdCellAlignVerticalCenter;
+                oDoc.Application.Selection.Cells[1].Column.Width = 80;
+                oDoc.Application.Selection.Cells[2].Column.Width = 150;
+                oDoc.Application.Selection.Cells[3].Column.Width = 400;
+                oDoc.Application.Selection.Cells[4].Column.Width = 125;
 
                 //header text
                 foreach (Word.Section section in oDoc.Application.ActiveDocument.Sections)

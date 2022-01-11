@@ -29,6 +29,8 @@ namespace MainWindow.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbPatientList = new System.Windows.Forms.ListBox();
             this.btPatientAdd = new System.Windows.Forms.Button();
             this.btPatientRemove = new System.Windows.Forms.Button();
@@ -45,7 +47,7 @@ namespace MainWindow.View
             this.lbPatientList.ItemHeight = 21;
             this.lbPatientList.Location = new System.Drawing.Point(12, 12);
             this.lbPatientList.Name = "lbPatientList";
-            this.lbPatientList.Size = new System.Drawing.Size(339, 592);
+            this.lbPatientList.Size = new System.Drawing.Size(339, 529);
             this.lbPatientList.TabIndex = 0;
             // 
             // btPatientAdd
@@ -53,7 +55,7 @@ namespace MainWindow.View
             this.btPatientAdd.BackColor = System.Drawing.SystemColors.Highlight;
             this.btPatientAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btPatientAdd.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btPatientAdd.Location = new System.Drawing.Point(12, 619);
+            this.btPatientAdd.Location = new System.Drawing.Point(214, 610);
             this.btPatientAdd.Name = "btPatientAdd";
             this.btPatientAdd.Size = new System.Drawing.Size(137, 57);
             this.btPatientAdd.TabIndex = 1;
@@ -65,7 +67,7 @@ namespace MainWindow.View
             this.btPatientRemove.BackColor = System.Drawing.SystemColors.Highlight;
             this.btPatientRemove.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btPatientRemove.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btPatientRemove.Location = new System.Drawing.Point(201, 619);
+            this.btPatientRemove.Location = new System.Drawing.Point(12, 610);
             this.btPatientRemove.Name = "btPatientRemove";
             this.btPatientRemove.Size = new System.Drawing.Size(150, 57);
             this.btPatientRemove.TabIndex = 2;
@@ -74,9 +76,29 @@ namespace MainWindow.View
             // 
             // dgwDiary
             // 
+            this.dgwDiary.AllowUserToDeleteRows = false;
+            this.dgwDiary.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgwDiary.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgwDiary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwDiary.Location = new System.Drawing.Point(370, 25);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwDiary.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgwDiary.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dgwDiary.Location = new System.Drawing.Point(370, 14);
             this.dgwDiary.Name = "dgwDiary";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwDiary.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgwDiary.RowTemplate.Height = 25;
             this.dgwDiary.Size = new System.Drawing.Size(884, 579);
             this.dgwDiary.TabIndex = 4;

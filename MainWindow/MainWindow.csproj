@@ -18,8 +18,4 @@
     </COMReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Model\Patient\" />
-  </ItemGroup>
-
 </Project>

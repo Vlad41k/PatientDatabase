@@ -10,6 +10,5 @@ namespace MainWindow.Model
         {
             Patients = new List<Patient>();
         }
-
     }
 }
