@@ -71,13 +71,17 @@ namespace MainWindow.View
         }
         private void OnSave(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "Word Documents (*.docx)|*.docx";
-            sfd.FileName = "PatientDiary.docx";
-            if (sfd.ShowDialog() == DialogResult.OK)
+            if (lbPatientList.SelectedIndex != -1)
             {
-                SaveToWord.SaveDataToWord(dgwDiary, sfd.FileName);
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "Word Documents (*.docx)|*.docx";
+                sfd.FileName = "PatientDiary.docx";
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    SaveToWord.SaveDataToWord(dgwDiary, sfd.FileName);
+                }
             }
+            else MessageBox.Show("Не выбран пациент для сохранения", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         private void AutoClear()
         {
