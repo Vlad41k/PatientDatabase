@@ -47,7 +47,7 @@ namespace MainWindow.View
             this.lbPatientList.ItemHeight = 21;
             this.lbPatientList.Location = new System.Drawing.Point(12, 12);
             this.lbPatientList.Name = "lbPatientList";
-            this.lbPatientList.Size = new System.Drawing.Size(339, 529);
+            this.lbPatientList.Size = new System.Drawing.Size(339, 571);
             this.lbPatientList.TabIndex = 0;
             // 
             // btPatientAdd
@@ -55,7 +55,7 @@ namespace MainWindow.View
             this.btPatientAdd.BackColor = System.Drawing.SystemColors.Highlight;
             this.btPatientAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btPatientAdd.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btPatientAdd.Location = new System.Drawing.Point(214, 610);
+            this.btPatientAdd.Location = new System.Drawing.Point(214, 601);
             this.btPatientAdd.Name = "btPatientAdd";
             this.btPatientAdd.Size = new System.Drawing.Size(137, 57);
             this.btPatientAdd.TabIndex = 1;
@@ -67,7 +67,7 @@ namespace MainWindow.View
             this.btPatientRemove.BackColor = System.Drawing.SystemColors.Highlight;
             this.btPatientRemove.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btPatientRemove.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btPatientRemove.Location = new System.Drawing.Point(12, 610);
+            this.btPatientRemove.Location = new System.Drawing.Point(12, 601);
             this.btPatientRemove.Name = "btPatientRemove";
             this.btPatientRemove.Size = new System.Drawing.Size(150, 57);
             this.btPatientRemove.TabIndex = 2;
@@ -100,7 +100,7 @@ namespace MainWindow.View
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgwDiary.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgwDiary.RowTemplate.Height = 25;
-            this.dgwDiary.Size = new System.Drawing.Size(884, 579);
+            this.dgwDiary.Size = new System.Drawing.Size(884, 569);
             this.dgwDiary.TabIndex = 4;
             // 
             // btSave
@@ -108,7 +108,7 @@ namespace MainWindow.View
             this.btSave.BackColor = System.Drawing.SystemColors.Highlight;
             this.btSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btSave.Location = new System.Drawing.Point(1104, 619);
+            this.btSave.Location = new System.Drawing.Point(1105, 601);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(150, 57);
             this.btSave.TabIndex = 5;

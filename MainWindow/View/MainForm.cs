@@ -29,7 +29,7 @@ namespace MainWindow.View
             JSONManagement.JSONDeserialize(Storage.Patients);
             _bs.ResetBindings(true);
             _Diarybs.ResetBindings(true);
-            if (Storage.Patients.Count > 0)
+            if (Storage.Patients.Count > 1)
             {
                 lbPatientList.SelectedIndex = 1;
                 lbPatientList.SelectedIndex = 0;
@@ -43,7 +43,9 @@ namespace MainWindow.View
         }
         private void OnPatientRemove(object sender, EventArgs e)
         {
-            Storage.Patients.RemoveAt(lbPatientList.SelectedIndex);
+            if (lbPatientList.SelectedIndex != -1)
+                Storage.Patients.RemoveAt(lbPatientList.SelectedIndex);
+            else MessageBox.Show("Не выбран пациент для удаления", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             JSONManagement.JSONSerialize(Storage.Patients);
             _bs.ResetBindings(true);
         }
@@ -55,10 +57,13 @@ namespace MainWindow.View
         }
         private void OnIndexChanged(object sender, EventArgs e)
         {
-            AutoClear();
-            _Diarybs.DataSource = Storage.Patients[lbPatientList.SelectedIndex].PatientDiary;
-            SetDgwSettings();
-            JSONManagement.JSONSerialize(Storage.Patients);
+            if (lbPatientList.SelectedIndex != -1)
+            {
+                AutoClear();
+                _Diarybs.DataSource = Storage.Patients[lbPatientList.SelectedIndex].PatientDiary;
+                SetDgwSettings();
+                JSONManagement.JSONSerialize(Storage.Patients);
+            }
         }
         private void OnApplicationClossing(object sender, FormClosingEventArgs e)
         {
@@ -88,9 +93,9 @@ namespace MainWindow.View
         }
         private void SetDgwSettings()
         {
-            this.dgwDiary.Columns[0].Width = 80;
+            this.dgwDiary.Columns[0].Width = 85;
             this.dgwDiary.Columns[1].Width = 140;
-            this.dgwDiary.Columns[2].Width = 521;
+            this.dgwDiary.Columns[2].Width = 516;
             this.dgwDiary.Columns[3].Width = 100;
             this.dgwDiary.Columns[0].HeaderText = "Дата звернення";
             this.dgwDiary.Columns[1].HeaderText = "Місце проведення лікування:\nполіклініка – 1,\nвдома – 2,\nденний стаціонар – 3,\nстаціонар вдома – 4";
